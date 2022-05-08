@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+  <process id="Process_1" isExecutable="false">
+    <startEvent id="StartEvent_1y45yut" name="开始">
+      <outgoing>SequenceFlow_0jnnry8</outgoing>
+    </startEvent>
+    <task id="Task_08cy14k">
+      <incoming>SequenceFlow_0jnnry8</incoming>
+      <dataOutputAssociation id="DataOutputAssociation_1sllabk">
+        <targetRef>DataObjectReference_1vzd9ok</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <sequenceFlow id="SequenceFlow_0jnnry8" sourceRef="StartEvent_1y45yut" targetRef="Task_08cy14k" />
+    <dataObjectReference id="DataObjectReference_1vzd9ok" dataObjectRef="DataObject_14wjzku" />
+    <dataObject id="DataObject_14wjzku" />
+    <businessRuleTask id="BusinessRuleTask_02bym2o">
+      <outgoing>SequenceFlow_0ndq2fv</outgoing>
+      <property id="Property_13g3j1d" name="__targetRef_placeholder" />
+      <dataInputAssociation id="DataInputAssociation_1qxz5hy">
+        <sourceRef>DataObjectReference_1vzd9ok</sourceRef>
+        <targetRef>Property_13g3j1d</targetRef>
+      </dataInputAssociation>
+    </businessRuleTask>
+    <endEvent id="EndEvent_1owzs5k">
+      <incoming>SequenceFlow_0ndq2fv</incoming>
+    </endEvent>
+    <sequenceFlow id="SequenceFlow_0ndq2fv" sourceRef="BusinessRuleTask_02bym2o" targetRef="EndEvent_1owzs5k" />
+  </process>
+  <bpmndi:BPMNDiagram id="BpmnDiagram_1">
+    <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+        <omgdc:Bounds x="152" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="160" y="145" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_08cy14k_di" bpmnElement="Task_08cy14k">
+        <omgdc:Bounds x="250" y="98" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0jnnry8_di" bpmnElement="SequenceFlow_0jnnry8">
+        <omgdi:waypoint x="192" y="122" />
+        <omgdi:waypoint x="250" y="122" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="DataObjectReference_1vzd9ok_di" bpmnElement="DataObjectReference_1vzd9ok">
+        <omgdc:Bounds x="366" y="98" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_1sllabk_di" bpmnElement="DataOutputAssociation_1sllabk">
+        <omgdi:waypoint x="298" y="122" />
+        <omgdi:waypoint x="366" y="122" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BusinessRuleTask_02bym2o_di" bpmnElement="BusinessRuleTask_02bym2o">
+        <omgdc:Bounds x="470" y="98" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataInputAssociation_1qxz5hy_di" bpmnElement="DataInputAssociation_1qxz5hy">
+        <omgdi:waypoint x="414" y="122" />
+        <omgdi:waypoint x="470" y="122" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_1owzs5k_di" bpmnElement="EndEvent_1owzs5k">
+        <omgdc:Bounds x="590" y="102" width="40" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ndq2fv_di" bpmnElement="SequenceFlow_0ndq2fv">
+        <omgdi:waypoint x="518" y="122" />
+        <omgdi:waypoint x="590" y="122" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
